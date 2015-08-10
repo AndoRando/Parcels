@@ -11,6 +11,10 @@ class Parcel
   end
 
   define_method(:cost_to_ship_my_pants) do
-    #logic goes somewhere else
+    if @weight <= 20
+      25
+    else
+      0
+    end
   end
 end

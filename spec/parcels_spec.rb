@@ -8,4 +8,11 @@ describe(Parcel) do
       expect(test_parcel.volumize_the_things()).to(eq(48))
     end
   end
+
+  describe("#cost_to_ship_my_pants") do
+    it("describes the cost to ship a parcel at the lowest weight tier") do
+      test_parcel = Parcel.new(6, 4, 2, 15)
+      expect(test_parcel.cost_to_ship_my_pants()).to(eq(25))
+    end
+  end
 end
